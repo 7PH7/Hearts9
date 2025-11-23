@@ -4,12 +4,11 @@ import ServiceCard from "./ServiceCard"
 
 const Services = () => {
   return (
-    //ID SERVICES para linkar no Navbar
-    <section id="services" className="py-24 px-6 bg-black">
-
+    <section id="services"
+    className="flex flex-col justify-center items-center px-6 py-40">
     <section className="py-24 px-6 bg-black">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12">Nossas Soluções</h2>
+        <h2 className="text-4xl font-bold text-center mb12">Nossas Soluções</h2>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <ServiceCard
@@ -27,7 +26,7 @@ const Services = () => {
           />
         </div>
       </div>
-    </section>
+      </section>
     </section>
   );
 };

@@ -1,28 +1,32 @@
 import React, { useState } from 'react';
-const Navbar = () => {
-    // Array de links para reutilização (melhor do que escrever <li> várias vezes!)
 
+const Navbar = () => {
+    // Array de links para reutilização (corrigido para usar IDs em português)
     const navLinks =[
-        { title: 'Home', href: '#hero'},
-        { title: 'About', href: '#about'},
-        { title: 'Services', href: '#services'},
+        { title: 'Home', href: '#hero'},      
+        { title: 'About', href: '#about'},    
+        { title: 'Services', href: '#services'}, 
     ];
-    //Variavel para Controlar se o mobile está aberto
+
+    // Variavel para Controlar se o mobile está aberto
     const [isOpen, setIsOpen] = useState(false);
-   
-    //função para fechar o menu ao clicar em um link
+    
+    // Função para fechar o menu ao clicar em um link
     const handleLinkClick = () => {
         setIsOpen(false);
     };
+
     return(
-    // FIXAÇÃO: fixed top-0 w-full e z-50 para garantir que fique por cima de tudo
+        // FIXAÇÃO: fixed top-0 w-full e z-50
         <nav className="fixed top-0 w-full bg-black/80 backdrop-blur-sm z-50 transition-all duration-300 border-b border-gray-800">
             <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+                
                 {/* 1. Logo (Branding) */}
                 <a href="#hero" className="text-4xl font-extrabold ">
                     Hearts<span className="text-red-600">9</span>
                 </a>
-                {/* 2. Links de navegação */}
+
+                {/* 2. Links de navegação (Desktop) */}
                 <ul className="hidden md:flex space-x-12">
                     {navLinks.map((link) => (
                         <li key={link.href}>
@@ -34,7 +38,8 @@ const Navbar = () => {
                         </li>
                     ))}
                 </ul>
-                {/* 3. CTA Secundário (Micro-CTA) */}
+
+                {/* 3. CTA Secundário (Desktop) */}
                 <a
                     href="https://forms.gle/JWzJyzQAiZQ8fwsVA"
                     target="_blank"
@@ -47,25 +52,25 @@ const Navbar = () => {
                 <button
                     onClick={() => setIsOpen(!isOpen)}
                     className="md:hidden text-2xl text-2xl z-50 focus:outline-none">
-                    {isOpen ? '✖' : '☰'} {/* Ícone de fechar ou Hamburguer*/}
-                    </button>
-                </div>
+                    {isOpen ? '✖' : '☰'} 
+                </button>
+            </div>
 
-                {/*5. MENU MOBILE */}
-                <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} absolute w-full top-full`}>
-                    <ul className="px-6 py-4 space-y-3 bg-zinc-950 border-5 border-gray-800 shadow-xl">
-                        {navLinks.map((link) => (
-                            <li key={link.href}>
-                                <a
-                                    href={link.href}
-                                    onClick={handleLinkClick}
-                                    className="block text-gray-300 hover:text-red-600 transition font-medium text-lg">
-                                    {link.title}
-                                </a>
-                            </li>
-                        ))}
-                                
-                            {/* CTA no Menu Mobile */}
+            {/* 5. MENU MOBILE */}
+            <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} absolute w-full top-full`}>
+                <ul className="px-6 py-4 space-y-3 bg-zinc-950 border-5 border-gray-800 shadow-xl">
+                    {navLinks.map((link) => (
+                        <li key={link.href}>
+                            <a
+                                href={link.href}
+                                onClick={handleLinkClick}
+                                className="block text-gray-300 hover:text-red-600 transition font-medium text-lg">
+                                {link.title}
+                            </a>
+                        </li>
+                    ))}
+                    
+                    {/* CTA no Menu Mobile */}
                     <li>
                         <a
                             href="https://forms.gle/JWzJyzQAiZQ8fwsVA"

@@ -1,12 +1,12 @@
-{/* FOOTER */}
 // src/components/Footer.jsx
 import React from 'react';
 
 const Footer = () => {
   return (
     <footer className="bg-zinc-950 py-10 px-6 border-t border-gray-800">
-      <div id="contact" className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-400">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-400">
+      
+      {/* ID da âncora para navegação: #contato */}
+      <div id="contato" className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-400">
         
         {/* Coluna 1: Branding e Direitos Autorais */}
         <div>
@@ -28,23 +28,20 @@ const Footer = () => {
         {/* Coluna 3: Contato */}
         <div>
           <h4 className="text-lg font-semibold text-white mb-4">Fale Conosco</h4>
-          <p className="text-sm">E-mail: contato@H9.com</p>
+          <p className="text-sm">E-mail: contato@9cups.com</p>
           <p className="text-sm">WhatsApp: (XX) 9XXXX-XXXX</p>
-          {/* Ícones de redes sociais podem ir aqui */}
           <div className="flex space-x-4 mt-3">
-             {/* Exemplo de link para rede social */}
              <a href="#" className="hover:text-red-600 transition">[Link/Ícone]</a>
           </div>
         </div>
       </div>
       
-      {/* Linha fina para Política de Privacidade */}
+      {/* Linha de Assinatura/Política de Privacidade */}
       <div className="text-center text-xs mt-10 border-t border-gray-800 pt-6">
         <p>Desenvolvido com ☕️ e Código. <a href="#" className="underline hover:text-red-600">Política de Privacidade</a></p>
       </div>
-      </div>
     </footer>
   );
-};
+}
 
 export default Footer;
