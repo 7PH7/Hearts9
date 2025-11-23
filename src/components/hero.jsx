@@ -9,11 +9,11 @@ const Hero = () => {
     className="flex flex-col justify-center items-center px-6 py-40">
 
     <section className="flex flex-col justify-center items-center px-6 py-40">
-      <h1 className="text-5xl md:text-7xl font-extrabold mb-4 text center leading-tight">
+      <h1 className="text-5xl md:text-7xl font-extrabold mb-6 text-center leading-tight">
         Seu Próximo Nível <span className="text-red-600">Digital</span> Começa Aqui.
       </h1>
 
-      <p className="text-xl text-gray-200 max-w-3xl text-center mb-10">
+      <p className="text-xl md:text-2xl text-gray-200 max-w-4xl text-center mb-10 mt-6">
         Desenvolvimento de ponta e textos persuasivos para construir sua presença digital.
       </p>
 
