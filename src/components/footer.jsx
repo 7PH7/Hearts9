@@ -31,7 +31,7 @@ const Footer = () => {
           <p className="text-sm">E-mail: contato@9cups.com</p>
           <p className="text-sm">WhatsApp: (XX) 9XXXX-XXXX</p>
           <div className="flex space-x-4 mt-3">
-             <a href="#" className="hover:text-red-600 transition">[Link/Ícone]</a>
+             <a href="#" className="hover:text-red-600 transition">🏠</a>
           </div>
         </div>
       </div>
